@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Surprise</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffebee;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      color: #e91e63;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    #surprise-button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #surprise-button:hover {
+      background-color: #c2185b;
+    }
+    #surprise-message {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #e91e63;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .heart {
+      color: #e91e63;
+      font-size: 2rem;
+      animation: float 3s infinite ease-in-out;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Valentine's Day! 💖</h1>
+    <p>You mean the world to me. Click the button to see a special message!</p>
+    <button id="surprise-button">Click Me!</button>
+    <div id="surprise-message">
+      <p>I love you to the moon and back! 🌙✨</p>
+      <div class="heart">❤️</div>
+    </div>
+  </div>
+
+  <script>
+    // Get the button and surprise message elements
+    const surpriseButton = document.getElementById('surprise-button');
+    const surpriseMessage = document.getElementById('surprise-message');
+
+    // Add a click event listener to the button
+    surpriseButton.addEventListener('click', () => {
+      // Show the surprise message
+      surpriseMessage.style.display = 'block';
+      // Hide the button after clicking
+      surpriseButton.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
